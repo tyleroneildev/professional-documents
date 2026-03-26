@@ -1,9 +1,17 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
 \documentclass[letterpaper,11pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{marvosym}
+\usepackage{fontawesome5}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
@@ -11,23 +19,33 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\usepackage{fontawesome5}
-\usepackage{multicol}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
 \input{glyphtounicode}
 
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
 \pagestyle{fancy}
-\fancyhf{}
+\fancyhf{} % clear all header and footer fields
 \fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
-\addtolength{\oddsidemargin}{-0.6in}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -35,151 +53,147 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 
+% Sections formatting
 \titleformat{\section}{
-  \vspace{-3pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-4pt}]
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
+% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-% CUSTOM COMMANDS
+%-------------------------
+% Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
   }
 }
 
-\newcommand{\resumeEduheading}[4]{
-  \item
-  \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-    \textbf{#1} & \textbf{#2} \\
-    \hspace*{0.5em}\textbf{\small#3} & {\small #4} \\
-  \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubheading}[2]{
-    \item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      {\small\:\textbf{#1}} & {\small #2} \\
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small #2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeProjectHeading}[2]{ 
+\newcommand{\resumeProjectHeading}[2]{
     \item
-    \textbf{\small #1} -- \textbf{\small #2}\vspace{-4pt}
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
 }
 
-\newcommand{\resumeSubItem}[2]{ 
- \item
-    \begin{tabular*}{\textwidth}{@{}l p{\dimexpr\textwidth-1.5cm}@{}}{\small\textbf{#1}}\hspace{0.5em} & {\small #2} \\ 
-    \end{tabular*}\vspace{-4pt}
-}
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-7pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
-%%%%%%  DOCUMENT STARTS HERE  %%%%%%
 \begin{document}
-
 %---------------HEADER---------------
 \begin{center}
-    {\Huge \scshape Tyler O'Neil} \\
-    \vspace{4pt}
-    \small \faIcon{canadian-maple-leaf} Toronto, Ontario ~
-    \href{mailto:tyleroneildev@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{tyleroneildev@gmail.com}} ~ 
-    \href{https://www.linkedin.com/in/tyler-oneil-dev/}{\raisebox{-0.1\height}\faLinkedin\ \underline{LinkedIn}} ~ 
-    \href{https://github.com/tyleroneildev}{\raisebox{-0.1\height}\faGithub\ \underline{GitHub}} ~
-    \href{https://tyleroneil.dev}{\raisebox{-0.2\height}\faGlobe\ \underline{tyleroneil.dev}}
-    \vspace{-6pt}
+  {\Huge \scshape Tyler O'Neil} \\
+  \vspace{4pt}
+  \small \faIcon{canadian-maple-leaf} Toronto, Ontario ~
+  \href{mailto:tyleroneildev@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{tyleroneildev@gmail.com}} ~ 
+  \href{https://www.linkedin.com/in/tyler-oneil-dev/}{\raisebox{-0.1\height}\faLinkedin\ \underline{LinkedIn}} ~ 
+  \href{https://github.com/tyleroneildev}{\raisebox{-0.1\height}\faGithub\ \underline{GitHub}} ~
+  \href{https://tyleroneil.dev}{\raisebox{-0.2\height}\faGlobe\ \underline{tyleroneil.dev}}
+  \vspace{-6pt}
 \end{center}
 
-%---------------EXPERIENCE---------------
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {McMaster University}{Hamilton, ON}
+      {Bachelor of Technology, Software Engineering Technology}{Part-time}
+    \resumeSubheading
+      {George Brown Polytechnic}{Toronto, ON}
+      {Advanced Diploma, Computer Programming and Analysis}{Apr 2025}
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
 \section{Experience}
   \resumeSubHeadingListStart
 
-    \resumeSubheading{Exchange Solutions Inc.}{Toronto, Ontario}
-      \resumeSubSubheading{Software Developer}{May 2025 -- Present}
+    \resumeSubheading
+      {Software Developer}{May 2025 -- Present}
+      {Exchange Solutions Inc.}{Toronto, ON}
       \resumeItemListStart
-        \resumeItem{Implement production-grade features across the loyalty platform's microservices ecosystem, focusing on AWS serverless architectures and scalable backend integration.}
-        \resumeItem{Improve reliability and maintainability by writing unit tests, reviewing peer code, and enforcing development best practices.}
-        \resumeItem{Collaborate with product owners and senior engineers to deliver performant, customer-focused enhancements in an agile environment.}
-        \resumeItem{Optimize APIs and service logic to reduce latency, increase clarity, and support long-term platform scalability.}
+      \resumeItem{Design, build, and maintain backend services for a production loyalty platform using AWS serverless architecture, including Lambda, API Gateway, SQS, and EventBridge}
+      \resumeItem{Implement event-driven workflows across distributed microservices to support reliable asynchronous processing and platform scalability}
+      \resumeItem{Improve service performance and maintainability by optimizing APIs, refactoring business logic, and debugging issues across multiple services}
+      \resumeItem{Increase code reliability through unit and end-to-end testing with Playwright and Robot Framework, peer code reviews, and production monitoring}
+      \resumeItem{Deliver features end-to-end in collaboration with product, QA, and engineering teams within an agile environment}
       \resumeItemListEnd
 
-    \resumeSubSubheading{Software Developer Intern}{May 2023 -- August 2024}
+    \resumeSubheading
+      {Software Developer Intern}{May 2023 -- Aug 2024}
+      {Exchange Solutions Inc.}{Toronto, ON}
       \resumeItemListStart
-        \resumeItem{Developed proof-of-concept Retrieval-Augmented Generation (RAG) agents using Node.js and OpenAI APIs, collaborating directly with the Director of Innovation Labs to accelerate early generative AI adoption within the company.}
-        \resumeItem{Conducted rapid prototyping, technical research, and experimentation to evaluate feasibility and impact of emerging AI technologies for integration into the core loyalty product.}
-        \resumeItem{Assisted engineering teams with debugging, small feature implementations, and refactoring tasks, strengthening foundational skills in TypeScript, cloud workflows, and agile development practices.}
+        \resumeItem{Prototyped Retrieval-Augmented Generation (RAG) systems using Node.js and OpenAI APIs to accelerate internal exploration of generative AI use cases}
+        \resumeItem{Partnered with the Director of Innovation Labs to evaluate emerging AI technologies through rapid experimentation, informing product direction and production feasibility}
+        \resumeItem{Contributed to production codebases by debugging issues and implementing features using TypeScript within AWS microservice workflows}
       \resumeItemListEnd
 
-    \resumeSubheading{PresenTEC Solutions}{Vaughan, Ontario}
-      \resumeSubSubheading{Front-End Developer Intern}{December 2022 -- April 2023}
+    \resumeSubheading
+      {Front-End Developer Intern}{Dec 2022 -- Apr 2023}
+      {PresenTEC Solutions}{Vaughan, ON}
       \resumeItemListStart
-        \resumeItem{Maintained and improved company website functionality using WordPress and custom development.}
-        \resumeItem{Implemented UI improvements following company brand guidelines to ensure consistent user experience.}
+        \resumeItem{Maintained and enhanced company website using WordPress and custom frontend development}
+        \resumeItem{Implemented UI improvements aligned with brand guidelines to improve consistency and usability}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
-%---------------PROJECTS---------------
-\section{Projects \footnotesize -- More information available on my {\href{https://tyleroneil.dev}{Website~\faExternalLink*}}}
-  \resumeSubHeadingListStart
 
-    \resumeProjectHeading
-      {\href{https://nest.software}{Nest~\faExternalLink*}}
-      {Typescript, Next.js, NextAuth.js, PostgreSQL, Prisma, Tailwind CSS, Stripe} 
-    \resumeItemListStart
-      \resumeItem{Designed and developed a minimalist investment tracker that provides users with personalized insights and projections for their portfolios, supporting multiple accounts and asset types.}
-      \resumeItem{Implemented secure Google sign-in, account management, and authorization features to protect user privacy and ensure data integrity.}
-      \resumeItem{Integrated subscription billing (Stripe) and direct brokerage connections (SnapTrade), enabling users to track investments manually or automatically with real-time data.}
-    \resumeItemListEnd
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
 
-    \resumeProjectHeading
-      {\href{https://duordle.net}{Duordle~\faExternalLink*}}
-      {Typescript, React.js, Node.js, Express.js, MongoDB, Tailwind CSS, Docker, Jest} 
-    \resumeItemListStart
-      \resumeItem{Developed a multiplayer online word game where users collaboratively guess words, utilizing Socket.io for real-time communication between players.}
-      \resumeItem{Containerized the application with Docker to enable streamlined deployment and seamless scalability.}
-      \resumeItem{Implemented comprehensive unit testing using Jest to ensure code reliability and robustness throughout development.}
-      \resumeItem{Set up a CI/CD pipeline and utilized Git for version control, streamlining the development workflow and enabling efficient project management while working independently.}
-    \resumeItemListEnd
-    
-  \resumeSubHeadingListEnd
+      \resumeProjectHeading
+          {\textbf{\href{https://nest.software}{Nest~\faExternalLink*}} $|$ \footnotesize TypeScript, Next.js, React, Prisma, PostgreSQL, NextAuth, Stripe, SnapTrade, Playwright, Vitest}{}
+          \resumeItemListStart
+            \resumeItem{Built a full-stack personal finance platform consolidating investment accounts, portfolio tracking, and financial insights into a unified dashboard}
+            \resumeItem{Developed using Next.js (App Router), TypeScript, and PostgreSQL with secure authentication via NextAuth}
+            \resumeItem{Integrated SnapTrade to connect brokerage accounts (e.g., Wealthsimple, Questrade) and sync holdings, implementing webhook verification, idempotent processing, and sync state management}
+            \resumeItem{Implemented Stripe subscription billing with server-side entitlements and automated testing (Vitest, Playwright) to ensure reliability of billing and sync workflows}
+          \resumeItemListEnd
 
-%---------------EDUCATION---------------
-\section{Education}
-  \resumeSubHeadingListStart
-    \resumeEduheading
-      {McMaster University}{Hamilton, Ontario}
-      {Bachelor of Technology, Software Engineering Technology}{}
-      \item \hspace*{0.5em}{\footnotesize Pursuing part-time while working full-time as a developer \textbar\ VP of Projects, McMaster Open Source Society (MOSS)}
-  \resumeSubHeadingListEnd
+      \resumeProjectHeading
+          {\textbf{\href{https://duordle.net}{Duordle~\faExternalLink*}} $|$ \footnotesize TypeScript, React, Node.js, Express, MongoDB, Socket.io, Docker, Jest}{}
+          \resumeItemListStart
+            \resumeItem{Developed a real-time multiplayer word game using WebSockets to enable synchronized, collaborative gameplay}
+            \resumeItem{Containerized the application with Docker to enable consistent deployment and scalability}
+            \resumeItem{Implemented unit testing with Jest and CI/CD workflows to ensure reliability and maintain code quality}
+          \resumeItemListEnd
 
-%---------------TECHNICAL SKILLS---------------
-\section{Technical Skills}
-  \resumeSubHeadingListStart
-    \resumeSubItem{Languages:}
-      {Javascript/Typescript, Python, Java, C\#, Bash, SQL, HTML, CSS}
-    \resumeSubItem{Technologies/Frameworks:}
-      {Node.js, Express.js, React.js, Next.js, Tailwind CSS, Bootstrap, Jest, .NET, Spring Boot}
-    \resumeSubItem{Databases:}
-      {MySQL, PostgreSQL, Oracle SQL, SQLite, Snowflake, MongoDB}
-    \resumeSubItem{Development Tools:}
-      {AWS, Vercel, Docker, Linux, Git, GitHub, Jenkins, Postman, Stripe, Jira, Bitbucket, Confluence}
-    \resumeSubItem{Certifications:}
-      {AWS Certified Cloud Practitioner, Bloomberg Market Concepts (BMC)}
     \resumeSubHeadingListEnd
+    
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: TypeScript, JavaScript, Python, Java, C\#, Bash, HTML/CSS} \\[4pt]
+     \textbf{Frameworks}{: Node.js, Express, React, Next.js, Tailwind CSS, Spring Boot, .NET} \\[4pt]
+     \textbf{Databases}{: PostgreSQL, MySQL, MongoDB, Oracle SQL, SQLite, Snowflake} \\[4pt]
+     \textbf{Developer Tools}{: AWS, Docker, Git, GitHub, Vercel, Jenkins, Postman, Stripe, Jira, Confluence, Bitbucket} \\[4pt]
+    \textbf{Certifications}{: AWS Certified Cloud Practitioner, Bloomberg Market Concepts (BMC)}
+    }}
+ \end{itemize}
 
-\end{document}
+\end{document}  
