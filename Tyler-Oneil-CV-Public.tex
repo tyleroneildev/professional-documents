@@ -1,0 +1,337 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage{fontawesome5}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \small #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+%---------------HEADER---------------
+\begin{center}
+  {\Huge \scshape Tyler O'Neil} \\
+  \vspace{4pt}
+  \small \faIcon{canadian-maple-leaf} Toronto, Ontario ~
+  \href{mailto:tyleroneildev@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{tyleroneildev@gmail.com}} ~ 
+  \href{https://www.linkedin.com/in/tyler-oneil-dev/}{\raisebox{-0.1\height}\faLinkedin\ \underline{LinkedIn}} ~ 
+  \href{https://github.com/tyleroneildev}{\raisebox{-0.1\height}\faGithub\ \underline{GitHub}} ~
+  \href{https://tyleroneil.dev}{\raisebox{-0.2\height}\faGlobe\ \underline{tyleroneil.dev}}
+  \vspace{-6pt}
+\end{center}
+
+%-----------PROFILE-----------
+\section{Profile}
+    \small{
+    Software developer with a strong interest in fintech, banking, and personal finance. 
+    Passionate about building tools that improve the investing experience and support better financial decision-making.
+    Experienced in full-stack development, cloud systems, and mentoring students through teaching and leadership roles.
+    }
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+  \resumeSubheading
+    {McMaster University}{Hamilton, ON}
+    {Bachelor of Technology, Software Engineering Technology}{2025 -- Present}
+    \resumeItemListStart
+      \resumeItem{Pursuing part-time studies while working full-time as a software developer}
+    \resumeItemListEnd
+  \resumeSubheading
+    {George Brown Polytechnic}{Toronto, ON}
+    {Advanced Diploma, Computer Programming and Analysis}{2022 -- 2025}
+    \resumeSubheading
+    {Mohawk College}{Hamilton, ON}
+    {Certificate, Business Management}{2025 -- Present}
+    \resumeItemListStart
+      \resumeItem{Completing alongside Bachelor of Technology studies at McMaster University}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Software Developer}{May 2025 -- Present}
+      {Exchange Solutions Inc.}{Toronto, ON}
+      \resumeItemListStart
+      \resumeItem{Design, build, and maintain backend services for a production loyalty platform using AWS serverless architecture, including Lambda, API Gateway, SQS, and EventBridge}
+      \resumeItem{Implement event-driven workflows across distributed microservices to support reliable asynchronous processing and platform scalability}
+      \resumeItem{Improve service performance and maintainability by optimizing APIs, refactoring business logic, and debugging issues across multiple services}
+      \resumeItem{Increase code reliability through unit and end-to-end testing with Playwright and Robot Framework, peer code reviews, and production monitoring}
+      \resumeItem{Deliver features end-to-end in collaboration with product, QA, and engineering teams within an agile environment}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Developer Intern}{May 2024 -- Aug 2024}
+      {Exchange Solutions Inc.}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Returned for a second internship to contribute to the core loyalty platform within an agile development team}
+        \resumeItem{Implemented frontend and backend features using TypeScript within AWS-based microservice architecture}
+        \resumeItem{Improved existing functionality through debugging, optimization, and refactoring to enhance product performance and user experience}
+        \resumeItem{Collaborated with senior developers and tech leads to deliver production-quality code in a fast-paced environment}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Software Developer Intern (Innovation Labs)}{May 2023 -- Sep 2023}
+      {Exchange Solutions Inc.}{Toronto, ON}
+      \resumeItemListStart
+        \resumeItem{Developed Node.js proof-of-concept applications exploring emerging technologies including Retrieval-Augmented AI agents and Snowflake Native Apps}
+        \resumeItem{Prototyped internal tools such as digital coupon automation systems to evaluate new product opportunities}
+        \resumeItem{Collaborated with cross-functional teams to conduct experiments, validate ideas, and assess technical feasibility}
+        \resumeItem{Worked alongside senior developers to iterate on prototypes aligned with strategic innovation initiatives}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Front-End Developer Intern}{Dec 2022 -- Apr 2023}
+      {PresenTEC Solutions}{Vaughan, ON}
+      \resumeItemListStart
+        \resumeItem{Maintained and improved the company website using WordPress, ensuring reliability, performance, and alignment with business objectives}
+        \resumeItem{Selected and customized templates to enhance user interface design and better reflect company branding}
+        \resumeItem{Used HTML and CSS to refine layouts, improve responsiveness, and optimize visual consistency across pages}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{\href{https://nest.software}{Nest~\faExternalLink*}} $|$ \footnotesize TypeScript, Next.js, React, Prisma, PostgreSQL, NextAuth, Stripe, SnapTrade, Playwright, Vitest}{}
+          \resumeItemListStart
+            \resumeItem{Built a full-stack personal finance platform consolidating investment accounts, portfolio tracking, and financial insights into a unified dashboard}
+            \resumeItem{Developed using Next.js (App Router), TypeScript, and PostgreSQL with secure authentication via NextAuth}
+            \resumeItem{Integrated SnapTrade to connect brokerage accounts (e.g., Wealthsimple, Questrade) and sync holdings, implementing webhook verification, idempotent processing, and sync state management}
+            \resumeItem{Implemented Stripe subscription billing with server-side entitlements and automated testing (Vitest, Playwright) to ensure reliability of billing and sync workflows}
+          \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{\href{https://duordle.net}{Duordle~\faExternalLink*}} $|$ \footnotesize TypeScript, React, Node.js, Express, MongoDB, Socket.io, Docker, Jest}{}
+          \resumeItemListStart
+            \resumeItem{Developed a real-time multiplayer word game using WebSockets to enable synchronized, collaborative gameplay}
+            \resumeItem{Containerized the application with Docker to enable consistent deployment and scalability}
+            \resumeItem{Implemented unit testing with Jest and CI/CD workflows to ensure reliability and maintain code quality}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+%-----------Teaching & Academic Experience-----------
+\section{Teaching \& Academic Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Teaching Assistant}{2024 -- 2025}
+  {George Brown Polytechnic}{Toronto, ON}
+  \resumeItemListStart
+    \resumeItem{Provided academic support for over 150 students across COMP1234 (Intro to Web Development), COMP1235 (Full Stack Development), and COMP2080 (Data Structures \& Algorithms)}
+    \resumeItem{Assisted in-class with explaining core concepts, guiding problem-solving, and supporting students through assignments and labs}
+    \resumeItem{Helped students debug frontend and backend issues, reinforcing understanding of web development and algorithmic thinking}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Academic Tutor}{2024 -- 2025}
+  {George Brown Polytechnic}{Toronto, ON}
+  \resumeItemListStart
+    \resumeItem{Delivered one-on-one tutoring sessions both in-person and online students}
+    \resumeItem{Supported students in web development and data structures courses, focusing on debugging, code comprehension, and problem-solving strategies}
+    \resumeItem{Adapted explanations to individual learning styles to improve student confidence and technical understanding}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------Leadership & Involvement-----------
+\section{Leadership \& Involvement}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Vice President of Projects}{2025 -- Present}
+  {McMaster Open Source Society (MOSS)}{Hamilton, ON}
+  \resumeItemListStart
+    \resumeItem{Lead project initiatives within a student-run open source club focused on collaborative software development}
+    \resumeItem{Coordinate student developers working on real-world projects and open source contributions}
+    \resumeItem{Support hands-on learning by guiding project structure, collaboration, and development workflows}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Mentor}{2026}
+  {DeltaHacks, McMaster University}{Hamilton, ON}
+  \resumeItemListStart
+    \resumeItem{Mentored student teams during DeltaHacks 12, a 24-hour hackathon hosted by McMaster University}
+    \resumeItem{Provided technical guidance, debugging support, and development advice under time constraints}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Vice President, Computer Science Club}{Sep 2024 -- Apr 2025}
+  {George Brown Polytechnic}{Toronto, ON}
+  \resumeItemListStart
+    \resumeItem{Led club operations by organizing meetings, coordinating events, and driving initiatives to support student learning and collaboration}
+    \resumeItem{Planned and executed workshops, guest speaker sessions, and hackathons in collaboration with the executive team}
+    \resumeItem{Managed event logistics and ensured alignment with the club’s mission of fostering technical growth and networking opportunities}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Advisor, Judge, \& Mentor}{2026}
+  {HuskyHack, George Brown Polytechnic}{Toronto, ON}
+  \resumeItemListStart
+    \resumeItem{Supported the first-ever HuskyHack, an MLH Day hackathon, by mentoring teams and evaluating projects}
+    \resumeItem{Provided technical guidance and judged submissions based on implementation, creativity, and execution}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------Certifications-----------
+\section{Certifications}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {AWS Certified Cloud Practitioner}{Nov 2025}
+  {Amazon Web Services (AWS)}{}
+  \resumeItemListStart
+    \resumeItem{Demonstrated foundational knowledge of AWS cloud services, architecture, and best practices}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Bloomberg Market Concepts (BMC)}{Dec 2025}
+  {Bloomberg}{}
+  \resumeItemListStart
+    \resumeItem{Completed coursework in equities, fixed income, currencies, and economic indicators}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+%-----------Awards-----------
+\section{Awards}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Citizenship Award}{Apr 2025}
+  {George Brown Polytechnic}{Toronto, ON}
+  \resumeItemListStart
+    \resumeItem{Recipient of the Citizenship Award for outstanding leadership, community involvement, and commitment to making a positive impact on campus}
+  \resumeItemListEnd
+
+\resumeSubheading
+  {Dean's List Scholar}{2022 -- 2025}
+  {George Brown Polytechnic}{Toronto, ON}
+  \resumeItemListStart
+    \resumeItem{Achieved a GPA above 3.5 in every academic semester}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+    
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: TypeScript, JavaScript, Python, Java, C\#, Bash, HTML/CSS} \\[4pt]
+     \textbf{Frameworks}{: Node.js, Express, React, Next.js, Tailwind CSS, Spring Boot, .NET} \\[4pt]
+     \textbf{Databases}{: PostgreSQL, MySQL, MongoDB, Oracle SQL, SQLite, Snowflake} \\[4pt]
+     \textbf{Developer Tools}{: AWS, Docker, Git, GitHub, Vercel, Jenkins, Postman, Stripe, Jira, Confluence, Bitbucket} \\[4pt]
+    }}
+ \end{itemize}
+
+%-----------Interests-----------
+\section{Interests}
+\resumeItemListStart
+  \resumeItem{Personal finance, long-term investing, and fintech product development}
+  \resumeItem{Teaching, mentorship, and helping others understand technical and financial concepts}
+  \resumeItem{Building software projects from idea to deployment}
+\resumeItemListEnd
+
+\end{document}  
